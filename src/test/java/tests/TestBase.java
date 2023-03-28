@@ -22,11 +22,13 @@ public class TestBase {
     static void openPracticeForm() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = "chrome";
-        Configuration.browserVersion = "100.0";
+        Configuration.browser = "chrome"; // браузер
+        Configuration.browserVersion = "100.0"; // версия браузера
         Configuration.holdBrowserOpen = false;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; //удалённый запуск браузера
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; //удалённый запуск браузера на selenoid
 
+        //конфиг что бы добавилось enableVNC - это мы ключаем что бы было окошко в окошке в Selenoid
+        //, enableVideo - вкл.запись видео происходит
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,

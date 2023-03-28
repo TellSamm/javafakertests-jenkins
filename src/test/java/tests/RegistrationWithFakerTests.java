@@ -45,6 +45,7 @@ public class RegistrationWithFakerTests extends TestBase {
                 .getUserCity(userCity)
                 .submitForm();
 
+
         registrationPage.verifyResultsModalAppears()
                 .verifyResult("Student Name", userFirstName + " " + userLastName)
                 .verifyResult("Student Email", userEmail)
