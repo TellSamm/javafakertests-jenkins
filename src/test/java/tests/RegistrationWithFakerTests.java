@@ -2,6 +2,8 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+import static io.qameta.allure.Allure.step;
 import static tests.TestData.*;
 import static utils.RandomUtils.getRandomItemFromArray;
 
@@ -28,35 +30,39 @@ public class RegistrationWithFakerTests extends TestBase {
                 userState = "NCR",
                 userCity = getRandomItemFromArray(cities);
 
+        step("Открытие главной страницы регистрации", () ->{
+            registrationPage.openPage();
+        });
+        step("Регистрация пользователя", () ->{
+            registrationPage.bannerRemoval()
+                    .setFirstName(userFirstName)
+                    .setLastName(userLastName)
+                    .setEmail(userEmail)
+                    .clickUserGender(userGender)
+                    .setNumber(userNumber)
+                    .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
+                    .setSubjects(userSubjects)
+                    .setHobbies(userHobbies)
+                    .fileUpload(userPictureLocation)
+                    .setUserAddress(userAddress)
+                    .getUserState(userState)
+                    .getUserCity(userCity)
+                    .submitForm();
+        });
+        step("Проверка валидности вывода результатов регистрации", () -> {
+            registrationPage.verifyResultsModalAppears()
+                    .verifyResult("Student Name", userFirstName + " " + userLastName)
+                    .verifyResult("Student Email", userEmail)
+                    .verifyResult("Gender", userGender)
+                    .verifyResult("Mobile", userNumber)
+                    .verifyResult("Date of Birth", userBirthDay_day + " " + userBirthDay_month + "," + userBirthDay_year)
+                    .verifyResult("Subjects", userSubjects)
+                    .verifyResult("Hobbies", userHobbies)
+                    .verifyResult("Picture", "photo_2022.jpg")
+                    .verifyResult("Address", userAddress)
+                    .verifyResult("State and City", userState + " " + userCity);
+        });
 
-        registrationPage.openPage()
-                .bannerRemoval()
-                .setFirstName(userFirstName)
-                .setLastName(userLastName)
-                .setEmail(userEmail)
-                .clickUserGender(userGender)
-                .setNumber(userNumber)
-                .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
-                .setSubjects(userSubjects)
-                .setHobbies(userHobbies)
-                .fileUpload(userPictureLocation)
-                .setUserAddress(userAddress)
-                .getUserState(userState)
-                .getUserCity(userCity)
-                .submitForm();
-
-
-        registrationPage.verifyResultsModalAppears()
-                .verifyResult("Student Name", userFirstName + " " + userLastName)
-                .verifyResult("Student Email", userEmail)
-                .verifyResult("Gender", userGender)
-                .verifyResult("Mobile", userNumber)
-                .verifyResult("Date of Birth", userBirthDay_day + " " + userBirthDay_month + "," + userBirthDay_year)
-                .verifyResult("Subjects", userSubjects)
-                .verifyResult("Hobbies", userHobbies)
-                .verifyResult("Picture", "photo_2022.jpg")
-                .verifyResult("Address", userAddress)
-                .verifyResult("State and City", userState + " " + userCity);
 
     }
 }
