@@ -3,7 +3,9 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.javafaker.Faker;
+import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -38,10 +40,21 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities; //конфигурация. Возможности браузера = возможности
     }
 
-    @BeforeEach
+
+    //Перед каждым тестом записываем шаги с step-ы что бы если мы развернули их видно было что где прошло или упало
+    @BeforeEach //
     void addListener() {
         SelenideLogger.addListener("AllureSelenide",new AllureSelenide());
     }
+    // добавляется сценарий теста как в IDEA (шаги)
+    // + в build.gradle добавили сначало зависимость "io.qameta.allure:allure-selenide:2.13.6"
 
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last schreenshoot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        //Attach.video();
+    }
 
 }
