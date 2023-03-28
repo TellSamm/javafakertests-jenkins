@@ -30,7 +30,7 @@ public class TestBase {
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; //удалённый запуск браузера на selenoid
 
         //конфиг что бы добавилось enableVNC - это мы ключаем что бы было окошко в окошке в Selenoid
-        //, enableVideo - вкл.запись видео происходит
+        //, enableVideo - вкл.запись видео происходит + ниже есть настройка  Attach.addVideo(); // ЗАПИСЬ ВИДЕО
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
@@ -49,12 +49,15 @@ public class TestBase {
     // добавляется сценарий теста как в IDEA (шаги)
     // + в build.gradle добавили сначало зависимость "io.qameta.allure:allure-selenide:2.13.6"
 
+
+
+    //Перед этими настройками добавили файл в дирректорию java/helpers название файла Attach c методами
     @AfterEach
     void addAttachments() {
-        Attach.screenshotAs("Last schreenshoot");
+        Attach.screenshotAs("Last screenshot"); //"Last screenshot" это просто название скрина который будет в Allure отчете
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        //Attach.video();
+        Attach.addVideo(); // ЗАПИСЬ ВИДЕО
     }
 
 }
