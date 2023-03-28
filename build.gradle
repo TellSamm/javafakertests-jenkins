@@ -42,17 +42,11 @@ test {
     useJUnitPlatform()
 }
 
-//task simple_tests(type: Test){
-//    useJUnitPlatform {
-//        includeTags("simple")
-//    }
-//
-//}
-//
-//task javafaker_test(type: Test){
-//    useJUnitPlatform {
-//        includeTags("FAKERTEST")
-//    }
 
-//}
+task javafaker_test(type: Test){
+    useJUnitPlatform {
+        includeTags("FAKERTEST")
+    }
+
+}
 
