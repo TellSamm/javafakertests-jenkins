@@ -42,5 +42,8 @@ public class SystemPropertiesTest {
 
         //gradle clean one_property_test
 
+        //gradle clean one_property_test -Dbrowser=safary
     }
+
+
 }
