@@ -29,7 +29,7 @@ public class TestBase {
         Configuration.holdBrowserOpen = false;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; //удалённый запуск браузера на selenoid
 
-        //конфиг что бы добавилось enableVNC - это мы ключаем что бы было окошко в окошке в Selenoid
+        //конфиг что бы добавилось enableVNC - это мы включаем что бы было окошко в окошке в Selenoid
         //, enableVideo - вкл.запись видео происходит + ниже есть настройка Attach.addVideo(); // ЗАПИСЬ ВИДЕО
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
