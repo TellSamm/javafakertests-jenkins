@@ -22,13 +22,14 @@ public class TestBase {
     //changes
     @BeforeAll
     static void openPracticeForm() {
-        Configuration.browserSize =  System.getProperty("BROWSER_SIZE");
-        Configuration.baseUrl = System.getProperty("BASE_URL","https://demoqa.com");
-        Configuration.browser = System.getProperty("browser","chrome"); // браузер
-        Configuration.browserVersion = System.getProperty("browser_version"); // версия браузера
-        Configuration.remote = "https://user1:1234" + System.getProperty("selenoid_url", "selenoid.autotests.cloud/wd/hub"); //@selenoid.autotests.cloud/wd/hub; //удалённый запуск браузера на selenoid
+        //Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com";
+        // Configuration.browser = "chrome"; // браузер
+        //Configuration.browserVersion = "100.0"; // версия браузера
+        //Configuration.holdBrowserOpen = false;
+       // Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; //удалённый запуск браузера на selenoid
 
-        //конфиг что бы добавилось enableVNC - это мы включаем что бы было окошко в окошке в Selenoid.
+        //конфиг что бы добавилось enableVNC - это мы включаем что бы было окошко в окошке в Selenoid
         //, enableVideo - вкл.запись видео происходит + ниже есть настройка Attach.addVideo(); // ЗАПИСЬ ВИДЕО
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
