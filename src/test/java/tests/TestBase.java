@@ -23,8 +23,8 @@ public class TestBase {
     @BeforeAll
     static void openPracticeForm() {
         //Configuration.browserSize = "1920x1080";
-        //Configuration.baseUrl = "https://demoqa.com";
-       // Configuration.browser = "chrome"; // браузер
+        Configuration.baseUrl = "https://demoqa.com";
+        // Configuration.browser = "chrome"; // браузер
         //Configuration.browserVersion = "100.0"; // версия браузера
         //Configuration.holdBrowserOpen = false;
        // Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; //удалённый запуск браузера на selenoid
