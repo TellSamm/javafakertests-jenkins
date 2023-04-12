@@ -19,7 +19,7 @@ import java.util.Map;
 public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker(new Locale("en-US"));
-
+    //changes
     @BeforeAll
     static void openPracticeForm() {
         //Configuration.browserSize = "1920x1080";
