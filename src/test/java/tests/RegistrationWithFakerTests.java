@@ -8,12 +8,11 @@ import static io.qameta.allure.Allure.step;
 import static tests.TestData.*;
 import static utils.RandomUtils.getRandomItemFromArray;
 
-
+@Tag("FAKERTEST")
 @DisplayName("Регистрация пользователя с использованием javafaker")
 public class RegistrationWithFakerTests extends TestBase {
 
     @Test
-    @Tag("FAKERTEST")
     @DisplayName("Генерация данных и присвоених их переменным")
     void fillingForm() {
         String userFirstName = faker.name().firstName(),
@@ -89,7 +88,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @Test
     @DisplayName("Проверка №3")
     void testUser3() {
-        step("ввод данных для тестового юзера №2", () -> {
+        step("ввод данных для тестового юзера №3", () -> {
             System.out.println("");
             System.out.println("");
         });
@@ -99,7 +98,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @Test
     @DisplayName("Проверка №4")
     void testUser4() {
-        step("ввод данных для тестового юзера №2", () -> {
+        step("ввод данных для тестового юзера №4", () -> {
             System.out.println("");
             System.out.println("");
         });
@@ -110,7 +109,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @Test
     @DisplayName("Проверка №5")
     void testUser5() {
-        step("ввод данных для тестового юзера №2", () -> {
+        step("ввод данных для тестового юзера №5", () -> {
             System.out.println("");
             System.out.println("");
         });
@@ -121,7 +120,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @Test
     @DisplayName("Проверка №6")
     void testUser6() {
-        step("ввод данных для тестового юзера №2", () -> {
+        step("ввод данных для тестового юзера №6", () -> {
             System.out.println("");
             System.out.println("");
         });
@@ -132,7 +131,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @Test
     @DisplayName("Проверка №2")
     void testUser7() {
-        step("ввод данных для тестового юзера №2", () -> {
+        step("ввод данных для тестового юзера №7", () -> {
             System.out.println("");
             System.out.println("");
         });
