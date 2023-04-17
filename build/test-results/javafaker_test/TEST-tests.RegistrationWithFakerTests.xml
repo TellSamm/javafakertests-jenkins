@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Р РµРіРёСЃС‚СЂР°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј javafaker" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-12T20:09:17" hostname="DESKTOP-T9D7JA9" time="23.654">
+  <properties/>
+  <testcase name="fillingForm()" classname="tests.RegistrationWithFakerTests" time="23.654"/>
+  <system-out><![CDATA[Start Test!
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Семён\IdeaProjects\qa_guru\javafakertests-jenkins\build\downloads\1681330161733_14552_1
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 111.0.5563.64 (resolved driver for Chrome 111)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Семён\.cache\selenium\chromedriver\win32\111.0.5563.64\chromedriver.exe
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 18224
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+апр. 12, 2023 11:09:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 111, so returning the closest version found: 110
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=111.0.5563.147 Platform=WINDOWS
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.12.2
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.8.1 build revision: 8ebccac989
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (c65fe91fa6a102e0ce4fd7ff5c9efa01)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on WINDOWS (c65fe91fa6a102e0ce4fd7ff5c9efa01),proxy=null,downloadsFolder=C:\Users\Семён\IdeaProjects\qa_guru\javafakertests-jenkins\build\downloads\1681330161733_14552_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+]]></system-err>
+</testsuite>

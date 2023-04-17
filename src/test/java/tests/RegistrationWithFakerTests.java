@@ -39,15 +39,15 @@ public class RegistrationWithFakerTests extends TestBase {
                     .setFirstName(userFirstName)
                     .setLastName(userLastName);
         });
-        step("ввод email", () -> {
+        step("Ввод email", () -> {
             registrationPage.setEmail(userEmail);
         });
 
-        step("выбор пола пользователя", () -> {
+        step("Выбор пола пользователя", () -> {
             registrationPage.clickUserGender(userGender);
         });
 
-        step("ввод остального набора данных необходимых для регистрации", () -> {
+        step("Ввод последнего набора данных для успешной регистрации", () -> {
             registrationPage.setNumber(userNumber)
                     .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
                     .setSubjects(userSubjects)
