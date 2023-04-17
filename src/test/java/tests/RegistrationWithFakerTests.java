@@ -1,4 +1,5 @@
 package tests;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -6,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 import static tests.TestData.*;
 import static utils.RandomUtils.getRandomItemFromArray;
-
 
 
 @DisplayName("Регистрация пользователя с использованием javafaker")
@@ -30,24 +30,33 @@ public class RegistrationWithFakerTests extends TestBase {
                 userState = "NCR",
                 userCity = getRandomItemFromArray(cities);
 
-        step("Открытие главной страницы регистрации", () ->{
+            step("Открытие главной страницы регистрации", () -> {
             registrationPage.openPage();
-        });
-        step("Регистрация пользователя", () ->{
+            });
+            step("Ввод FirstName and LastName", () -> {
             registrationPage.bannerRemoval()
                     .setFirstName(userFirstName)
-                    .setLastName(userLastName)
-                    .setEmail(userEmail)
-                    .clickUserGender(userGender)
-                    .setNumber(userNumber)
-                    .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
-                    .setSubjects(userSubjects)
-                    .setHobbies(userHobbies)
-                    .fileUpload(userPictureLocation)
-                    .setUserAddress(userAddress)
-                    .getUserState(userState)
-                    .getUserCity(userCity)
-                    .submitForm();
+                    .setLastName(userLastName);
+            step("ввод email", () -> {
+                registrationPage.setEmail(userEmail);
+            });
+
+            step("выбор пола пользователя", () -> {
+                registrationPage.clickUserGender(userGender);
+            });
+
+            step("ввод остального набора данных необходимых для регистрации", () -> {
+                registrationPage.setNumber(userNumber)
+                        .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
+                        .setSubjects(userSubjects)
+                        .setHobbies(userHobbies)
+                        .fileUpload(userPictureLocation)
+                        .setUserAddress(userAddress)
+                        .getUserState(userState)
+                        .getUserCity(userCity)
+                        .submitForm();
+            });
+
         });
         step("Проверка валидности вывода результатов регистрации", () -> {
             registrationPage.verifyResultsModalAppears()
