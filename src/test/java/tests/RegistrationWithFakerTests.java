@@ -77,7 +77,6 @@ public class RegistrationWithFakerTests extends TestBase {
     }
 
     @Test
-    @Tag("FAKERTEST")
     @DisplayName("Проверка №2")
     void testUser2() {
         step("ввод данных для тестового юзера №2", () -> {
@@ -88,7 +87,6 @@ public class RegistrationWithFakerTests extends TestBase {
     }
 
     @Test
-    @Tag("FAKERTEST")
     @DisplayName("Проверка №3")
     void testUser3() {
         step("ввод данных для тестового юзера №2", () -> {
@@ -99,7 +97,6 @@ public class RegistrationWithFakerTests extends TestBase {
     }
 
     @Test
-    @Tag("FAKERTEST")
     @DisplayName("Проверка №4")
     void testUser4() {
         step("ввод данных для тестового юзера №2", () -> {
@@ -111,7 +108,6 @@ public class RegistrationWithFakerTests extends TestBase {
 
 
     @Test
-    @Tag("FAKERTEST")
     @DisplayName("Проверка №5")
     void testUser5() {
         step("ввод данных для тестового юзера №2", () -> {
@@ -123,7 +119,6 @@ public class RegistrationWithFakerTests extends TestBase {
 
 
     @Test
-    @Tag("FAKERTEST")
     @DisplayName("Проверка №6")
     void testUser6() {
         step("ввод данных для тестового юзера №2", () -> {
@@ -135,7 +130,6 @@ public class RegistrationWithFakerTests extends TestBase {
 
 
     @Test
-    @Tag("FAKERTEST")
     @DisplayName("Проверка №2")
     void testUser7() {
         step("ввод данных для тестового юзера №2", () -> {
