@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbe00410-16ef-4922-acdd-3f0289538d3e" name="Changes" comment="mini changes new" />
+    <list default="true" id="dbe00410-16ef-4922-acdd-3f0289538d3e" name="Changes" comment="mini changes new">
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationWithFakerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationWithFakerTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681759212954</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="mini changes new">
+      <created>1681759711977</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681759711977</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
