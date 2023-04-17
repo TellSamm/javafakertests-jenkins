@@ -59,7 +59,6 @@ public class RegistrationWithFakerTests extends TestBase {
                     .submitForm();
         });
 
-
         step("Проверка валидности вывода результатов регистрации", () -> {
             registrationPage.verifyResultsModalAppears()
                     .verifyResult("Student Name", userFirstName + " " + userLastName)
