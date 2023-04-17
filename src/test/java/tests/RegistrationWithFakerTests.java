@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -79,8 +80,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка №2")
     void testUser2() {
         step("ввод данных для тестового юзера №2", () -> {
-            System.out.println("");
-            System.out.println("");
+            Selenide.open("http://sovch.chuvashia.com");
         });
 
     }
@@ -89,8 +89,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка №3")
     void testUser3() {
         step("ввод данных для тестового юзера №3", () -> {
-            System.out.println("");
-            System.out.println("");
+            Selenide.open("http://sovch.chuvashia.com");
         });
 
     }
@@ -99,8 +98,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка №4")
     void testUser4() {
         step("ввод данных для тестового юзера №4", () -> {
-            System.out.println("");
-            System.out.println("");
+            Selenide.open("http://sovch.chuvashia.com");
         });
 
     }
@@ -110,8 +108,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка №5")
     void testUser5() {
         step("ввод данных для тестового юзера №5", () -> {
-            System.out.println("");
-            System.out.println("");
+            Selenide.open("http://sovch.chuvashia.com");
         });
 
     }
@@ -121,8 +118,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка №6")
     void testUser6() {
         step("ввод данных для тестового юзера №6", () -> {
-            System.out.println("");
-            System.out.println("");
+            Selenide.open("http://sovch.chuvashia.com");
         });
 
     }
@@ -132,8 +128,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка №2")
     void testUser7() {
         step("ввод данных для тестового юзера №7", () -> {
-            System.out.println("");
-            System.out.println("");
+            Selenide.open("http://sovch.chuvashia.com");
         });
 
     }
