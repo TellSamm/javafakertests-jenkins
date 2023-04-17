@@ -112,7 +112,7 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка №5")
     void testUser5() {
         step("ввод данных для тестового юзера №5", () -> {
-            Selenide.open("http://sovch.chuvashia.com");
+            Selenide.open("http://sovch.chuvashia.com1111");
         });
 
     }
