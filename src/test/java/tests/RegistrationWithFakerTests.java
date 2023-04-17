@@ -15,7 +15,7 @@ import static utils.RandomUtils.getRandomItemFromArray;
 @Tag("FAKERTEST")
 public class RegistrationWithFakerTests extends TestBase {
 
-    @Order(0)
+    @Order(1)
     @Test
     @DisplayName("Генерация данных и присвоених их переменным")
     void fillingForm() {
@@ -80,7 +80,7 @@ public class RegistrationWithFakerTests extends TestBase {
     }
 
 
-    @Order(1)
+    @Order(2)
     @Test
     @DisplayName("Проверка №1")
     void testUser2() {
@@ -90,7 +90,7 @@ public class RegistrationWithFakerTests extends TestBase {
 
     }
 
-    @Order(2)
+    @Order(3)
     @Test
     @DisplayName("Проверка №2")
     void testUser3() {
@@ -100,7 +100,7 @@ public class RegistrationWithFakerTests extends TestBase {
 
     }
 
-    @Order(3)
+    @Order(4)
     @Test
     @DisplayName("Проверка №3")
     void testUser4() {
@@ -110,7 +110,7 @@ public class RegistrationWithFakerTests extends TestBase {
 
     }
 
-    @Order(4)
+    @Order(5)
     @Test
     @DisplayName("Проверка №4")
     void testUser5() {
@@ -120,7 +120,7 @@ public class RegistrationWithFakerTests extends TestBase {
 
     }
 
-    @Order(5)
+    @Order(6)
     @Test
     @DisplayName("Проверка №5")
     void testUser6() {
@@ -130,7 +130,7 @@ public class RegistrationWithFakerTests extends TestBase {
 
     }
 
-    @Order(6)
+    @Order(7)
     @Test
     @DisplayName("Проверка №6")
     void testUser7() {
@@ -140,6 +140,7 @@ public class RegistrationWithFakerTests extends TestBase {
 
     }
 }
+
 
 
 
