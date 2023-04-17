@@ -34,9 +34,10 @@ public class RegistrationWithFakerTests extends TestBase {
             registrationPage.openPage();
             });
             step("Ввод FirstName and LastName", () -> {
-            registrationPage.bannerRemoval()
-                    .setFirstName(userFirstName)
-                    .setLastName(userLastName);
+                        registrationPage.bannerRemoval()
+                                .setFirstName(userFirstName)
+                                .setLastName(userLastName);
+                    });
             step("ввод email", () -> {
                 registrationPage.setEmail(userEmail);
             });
@@ -57,7 +58,7 @@ public class RegistrationWithFakerTests extends TestBase {
                         .submitForm();
             });
 
-        });
+
         step("Проверка валидности вывода результатов регистрации", () -> {
             registrationPage.verifyResultsModalAppears()
                     .verifyResult("Student Name", userFirstName + " " + userLastName)
@@ -75,3 +76,4 @@ public class RegistrationWithFakerTests extends TestBase {
 
     }
 }
+
