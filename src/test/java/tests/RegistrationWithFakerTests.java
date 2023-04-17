@@ -14,6 +14,7 @@ public class RegistrationWithFakerTests extends TestBase {
 
     @Test
     @Tag("FAKERTEST")
+    @DisplayName("Генерация данных и присвоених их переменным")
     void fillingForm() {
         String userFirstName = faker.name().firstName(),
                 userLastName = faker.name().lastName(),
@@ -30,33 +31,33 @@ public class RegistrationWithFakerTests extends TestBase {
                 userState = "NCR",
                 userCity = getRandomItemFromArray(cities);
 
-            step("Открытие главной страницы регистрации", () -> {
+        step("Открытие главной страницы регистрации", () -> {
             registrationPage.openPage();
-            });
-            step("Ввод FirstName and LastName", () -> {
-                        registrationPage.bannerRemoval()
-                                .setFirstName(userFirstName)
-                                .setLastName(userLastName);
-                    });
-            step("ввод email", () -> {
-                registrationPage.setEmail(userEmail);
-            });
+        });
+        step("Ввод FirstName and LastName", () -> {
+            registrationPage.bannerRemoval()
+                    .setFirstName(userFirstName)
+                    .setLastName(userLastName);
+        });
+        step("ввод email", () -> {
+            registrationPage.setEmail(userEmail);
+        });
 
-            step("выбор пола пользователя", () -> {
-                registrationPage.clickUserGender(userGender);
-            });
+        step("выбор пола пользователя", () -> {
+            registrationPage.clickUserGender(userGender);
+        });
 
-            step("ввод остального набора данных необходимых для регистрации", () -> {
-                registrationPage.setNumber(userNumber)
-                        .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
-                        .setSubjects(userSubjects)
-                        .setHobbies(userHobbies)
-                        .fileUpload(userPictureLocation)
-                        .setUserAddress(userAddress)
-                        .getUserState(userState)
-                        .getUserCity(userCity)
-                        .submitForm();
-            });
+        step("ввод остального набора данных необходимых для регистрации", () -> {
+            registrationPage.setNumber(userNumber)
+                    .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
+                    .setSubjects(userSubjects)
+                    .setHobbies(userHobbies)
+                    .fileUpload(userPictureLocation)
+                    .setUserAddress(userAddress)
+                    .getUserState(userState)
+                    .getUserCity(userCity)
+                    .submitForm();
+        });
 
 
         step("Проверка валидности вывода результатов регистрации", () -> {
