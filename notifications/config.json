@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "test_report",
+    "project": "18_project",
+    "environment": "macbook_pro",
+    "comment": "Dimas_?_you",
+    "reportLink": "https://jenkins.autotests.cloud",
+    "language": "ru",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "bot6007319992:AAEuL6Iuw8PI4wLdBwD52JMi9-Cu2w_OOAk",
+    "chat": "-1001821386254",
+    "replyTo": ""
+  }
+}
