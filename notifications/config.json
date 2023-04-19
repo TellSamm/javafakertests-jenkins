@@ -3,7 +3,7 @@
     "logo": "test_report",
     "project": "18_project",
     "environment": "macbook_pro",
-    "comment": "Dimas_?_you_HOLLA",
+    "comment": "Dimas_?",
     "reportLink": "https://jenkins.autotests.cloud",
     "language": "en",
     "allureFolder": "allure-report/",
