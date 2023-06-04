@@ -1,5 +1,8 @@
 package tests;
+
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -8,12 +11,13 @@ import static tests.TestData.*;
 import static utils.RandomUtils.getRandomItemFromArray;
 
 
-
 @DisplayName("Регистрация пользователя с использованием javafaker")
+@Tag("FAKERTEST")
 public class RegistrationWithFakerTests extends TestBase {
 
+    @Order(1)
     @Test
-    @Tag("FAKERTEST")
+    @DisplayName("Генерация данных и присвоених их переменным")
     void fillingForm() {
         String userFirstName = faker.name().firstName(),
                 userLastName = faker.name().lastName(),
@@ -30,16 +34,24 @@ public class RegistrationWithFakerTests extends TestBase {
                 userState = "NCR",
                 userCity = getRandomItemFromArray(cities);
 
-        step("Открытие главной страницы регистрации", () ->{
+        step("Открытие главной страницы регистрации", () -> {
             registrationPage.openPage();
         });
-        step("Регистрация пользователя", () ->{
+        step("Ввод FirstName and LastName", () -> {
             registrationPage.bannerRemoval()
                     .setFirstName(userFirstName)
-                    .setLastName(userLastName)
-                    .setEmail(userEmail)
-                    .clickUserGender(userGender)
-                    .setNumber(userNumber)
+                    .setLastName(userLastName);
+        });
+        step("Ввод email", () -> {
+            registrationPage.setEmail(userEmail);
+        });
+
+        step("Выбор пола пользователя", () -> {
+            registrationPage.clickUserGender(userGender);
+        });
+
+        step("Ввод последнего набора данных для успешной регистрации", () -> {
+            registrationPage.setNumber(userNumber)
                     .setBirthDate(userBirthDay_day, userBirthDay_month, userBirthDay_year)
                     .setSubjects(userSubjects)
                     .setHobbies(userHobbies)
@@ -49,6 +61,7 @@ public class RegistrationWithFakerTests extends TestBase {
                     .getUserCity(userCity)
                     .submitForm();
         });
+
         step("Проверка валидности вывода результатов регистрации", () -> {
             registrationPage.verifyResultsModalAppears()
                     .verifyResult("Student Name", userFirstName + " " + userLastName)
@@ -65,4 +78,72 @@ public class RegistrationWithFakerTests extends TestBase {
 
 
     }
+
+
+    @Order(2)
+    @Test
+    @DisplayName("Проверка №1")
+    void testUser2() {
+        step("ввод данных для тестового юзера №2", () -> {
+            Selenide.open("http://sovch.chuvashia.com");
+        });
+
+    }
+
+    @Order(3)
+    @Test
+    @DisplayName("Проверка №2")
+    void testUser3() {
+        step("ввод данных для тестового юзера №3", () -> {
+            Selenide.open("http://sovch.chuvashia.com");
+        });
+
+    }
+
+    @Order(4)
+    @Test
+    @DisplayName("Проверка №3")
+    void testUser4() {
+        step("ввод данных для тестового юзера №4", () -> {
+            Selenide.open("http://sovch.chuvashia.com");
+        });
+
+    }
+
+    @Order(5)
+    @Test
+    @DisplayName("Проверка №4")
+    void testUser5() {
+        step("ввод данных для тестового юзера №5", () -> {
+            Selenide.open("http://sovch.chuvashia.com");
+        });
+
+    }
+
+    @Order(6)
+    @Test
+    @DisplayName("Проверка №5")
+    void testUser6() {
+        step("ввод данных для тестового юзера №6", () -> {
+            Selenide.open("http://sovch.chuvashia.com");
+        });
+
+    }
+
+    @Order(7)
+    @Test
+    @DisplayName("Проверка №6")
+    void testUser7() {
+        step("ввод данных для тестового юзера №7", () -> {
+            Selenide.open("http://sovch.chuvashia.com");
+        });
+
+    }
 }
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="properties.SystemPropertiesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-01T19:12:42" hostname="DESKTOP-T9D7JA9" time="0.608">
+  <properties/>
+  <testcase name="simplePropertyTest4()" classname="properties.SystemPropertiesTest" time="0.608"/>
+  <system-out><![CDATA[mozilla
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
